@@ -1,23 +1,28 @@
 import { Box, Button, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
-import React from "react";
+import React, { useState } from "react";
 import { Notifications } from "./Notifications";
+import SaveModal from "./SaveModal";
 import { SitesNotifications } from "./SitesNotifications";
+import SuccessModal from "./SuccessModal";
 import { TelegramNotifications } from "./TelegramNotifications";
 
 
 export const Feed = () => {
-  const [notifications1Item, setNotifications1Item] = React.useState(true);
-  const [notifications2Item, setNotifications2Item] = React.useState(false);
-  const [notifications3Item, setNotifications3Item] = React.useState(true);
-  const [sitesNotif1Item, setSitesNotif1Item] = React.useState(false);
-  const [sitesNotif2Item, setSitesNotif2Item] = React.useState(true);
-  const [sitesNotif3Item, setSitesNotif3Item] = React.useState(false);
-  const [sitesNotif4Item, setSitesNotif4Item] = React.useState(false);
-  const [sitesNotif5Item, setSitesNotif5Item] = React.useState(true);
-  const [sitesNotif6Item, setSitesNotif6Item] = React.useState(true);
-  const [sitesNotif7Item, setSitesNotif7Item] = React.useState(false);
-  const [notifTelegram, setNotifTelegram] = React.useState(false);
+  const [notifications1Item, setNotifications1Item] = useState(true);
+  const [notifications2Item, setNotifications2Item] = useState(false);
+  const [notifications3Item, setNotifications3Item] = useState(true);
+  const [sitesNotif1Item, setSitesNotif1Item] = useState(false);
+  const [sitesNotif2Item, setSitesNotif2Item] = useState(true);
+  const [sitesNotif3Item, setSitesNotif3Item] = useState(false);
+  const [sitesNotif4Item, setSitesNotif4Item] = useState(false);
+  const [sitesNotif5Item, setSitesNotif5Item] = useState(true);
+  const [sitesNotif6Item, setSitesNotif6Item] = useState(true);
+  const [sitesNotif7Item, setSitesNotif7Item] = useState(false);
+  const [notifTelegram, setNotifTelegram] = useState(false);
+
+  const [openSaveModal, setOpenSaveModal] = useState(false);
+  const [openSuccessModal, setOpenSuccessModal] = useState(false);
 
   const handleChangeNotification = (check) => {
     check(prev => !prev)
@@ -127,7 +132,10 @@ export const Feed = () => {
         >
           По умолчанию
         </Button>
-        <Button variant="contained" sx={{
+        <Button 
+          onClick={() => setOpenSaveModal(true)}
+          variant="contained" 
+          sx={{
           background: "#3861FB",
           color: "#FFF",
           textTransform: "initial",
@@ -140,6 +148,14 @@ export const Feed = () => {
           Сохранить
         </Button>
       </Stack>
+
+      {openSaveModal && (
+        <SaveModal openModal={openSaveModal} setOpenModal={setOpenSaveModal}/>
+      )}
+
+      {openSuccessModal && (
+        <SuccessModal openModal={openSuccessModal} setOpenModal={setOpenSuccessModal}/>
+      )}
     </Box>
   )
 }

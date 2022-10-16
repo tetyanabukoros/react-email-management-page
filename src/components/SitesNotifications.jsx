@@ -1,6 +1,6 @@
 import { Box, Chip, Link, MenuItem, Select, Stack, Switch, Typography } from "@mui/material";
 import React, { useState } from "react";
-import TransitionsModal from "./Modal";
+import TransitionsModal from "./DetailsModal";
 
 
 export const SitesNotifications = ({ 
