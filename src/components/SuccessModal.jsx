@@ -6,6 +6,8 @@ import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
+
 
 const style = {
   position: 'absolute',
@@ -47,7 +49,7 @@ export default function SuccessModal({ openModal, setOpenModal }) {
               Изменения успешно сохранены.
             </Typography>
             {!isDoneIcon && <InfoOutlinedIcon color="success" fontSize='large'/>}
-            {isDoneIcon && <CheckCircleOutlineOutlinedIcon color="success" fontSize='large'/>}
+            {isDoneIcon && <TaskAltOutlinedIcon color="success" fontSize='large'/>}
           </Box>
         </Fade>
       </Modal>
