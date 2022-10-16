@@ -1,17 +1,34 @@
 import { Box, Chip, Link, MenuItem, Select, Stack, Switch, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 
 
-export const SitesNotifications = () => {
+export const SitesNotifications = ({ 
+  adsMessageFirst,
+  handleAdsMessageFirst,
+  adsMessageSecond,
+  handleAdsMessageSecond,
+  handleChangeNotification,
+  sitesNotif1Item,
+  sitesNotif2Item,
+  sitesNotif3Item,
+  sitesNotif4Item,
+  sitesNotif5Item,
+  sitesNotif6Item,
+  sitesNotif7Item,
+  setSitesNotif1Item,
+  setSitesNotif2Item,
+  setSitesNotif3Item,
+  setSitesNotif4Item,
+  setSitesNotif5Item,
+  setSitesNotif6Item,
+  setSitesNotif7Item,
+}) => {
+
+  const [isChip, setIsChip] = useState(true);
   const handleDelete = () => {
     console.info('You clicked the delete icon.');
   };
-  const [messageSelect, setMessageSelect] = React.useState(10);
 
-const handleMessageSelect = (event) => {
-  setMessageSelect(event.target.value);
-};
-  
   return (
     <Box>
     <Typography
@@ -38,8 +55,8 @@ const handleMessageSelect = (event) => {
       </Typography>
       <Switch
         flex={2}
-        // checked={checked}
-        // onChange={handleChange}
+        checked={sitesNotif1Item}
+        onChange={() => handleChangeNotification(setSitesNotif1Item)}
         inputProps={{ 'aria-label': 'controlled' }}
       />
       <Typography
@@ -89,8 +106,8 @@ const handleMessageSelect = (event) => {
       </Link>
       <Switch
         flex={2}
-        // checked={checked}
-        // onChange={handleChange}
+        checked={sitesNotif2Item}
+        onChange={() => handleChangeNotification(setSitesNotif2Item)}
         inputProps={{ 'aria-label': 'controlled' }}
       />
       <Typography
@@ -136,8 +153,8 @@ const handleMessageSelect = (event) => {
       </Link>
       <Switch
         flex={2}
-        // checked={checked}
-        // onChange={handleChange}
+        checked={sitesNotif3Item}
+        onChange={() => handleChangeNotification(setSitesNotif3Item)}
         inputProps={{ 'aria-label': 'controlled' }}
       />
       <Typography
@@ -182,8 +199,8 @@ const handleMessageSelect = (event) => {
       </Link>
       <Switch
         flex={2}
-        // checked={checked}
-        // onChange={handleChange}
+        checked={sitesNotif4Item}
+        onChange={() => handleChangeNotification(setSitesNotif4Item)}
         inputProps={{ 'aria-label': 'controlled' }}
       />
       <Typography
@@ -225,8 +242,8 @@ const handleMessageSelect = (event) => {
       </Link>
       <Switch
         flex={2}
-        // checked={checked}
-        // onChange={handleChange}
+        checked={sitesNotif5Item}
+        onChange={() => handleChangeNotification(setSitesNotif5Item)}
         inputProps={{ 'aria-label': 'controlled' }}
       />
       <Typography
@@ -267,8 +284,8 @@ const handleMessageSelect = (event) => {
       </Link>
       <Switch
         flex={2}
-        // checked={checked}
-        // onChange={handleChange}
+        checked={sitesNotif6Item}
+        onChange={() => handleChangeNotification(setSitesNotif6Item)}
         inputProps={{ 'aria-label': 'controlled' }}
       />
 
@@ -277,8 +294,8 @@ const handleMessageSelect = (event) => {
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           defaultValue={10}
-          value={messageSelect}
-          onChange={handleMessageSelect}
+          value={adsMessageFirst}
+          onChange={handleAdsMessageFirst}
         >
           <MenuItem value={10}>Мгновенно</MenuItem>
           <MenuItem value={20}>1 раз в день</MenuItem>
@@ -311,8 +328,8 @@ const handleMessageSelect = (event) => {
       </Link>
       <Switch
         flex={2}
-        // checked={checked}
-        // onChange={handleChange}
+        checked={sitesNotif7Item}
+        onChange={() => handleChangeNotification(setSitesNotif7Item)}
         inputProps={{ 'aria-label': 'controlled' }}
       />
 
@@ -321,8 +338,8 @@ const handleMessageSelect = (event) => {
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           defaultValue={10}
-          value={messageSelect}
-          onChange={handleMessageSelect}
+          value={adsMessageSecond}
+          onChange={handleAdsMessageSecond}
         >
           <MenuItem value={10}>Мгновенно</MenuItem>
           <MenuItem value={20}>1 раз в день</MenuItem>

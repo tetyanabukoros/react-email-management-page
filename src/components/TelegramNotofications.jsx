@@ -1,7 +1,11 @@
-import { Link, Stack, Switch, Typography } from "@mui/material";
+import { Stack, Switch, Typography } from "@mui/material";
 import React from "react";
 
-export const TelegramNotifications = () => {
+export const TelegramNotifications = ({
+  notifTelegram,
+  setNotifTelegram,
+  handleChangeNotification,
+}) => {
   
   return (
   <>
@@ -29,8 +33,8 @@ export const TelegramNotifications = () => {
         </Typography>
         <Switch
           flex={2}
-          // checked={checked}
-          // onChange={handleChange}
+          checked={notifTelegram}
+          onChange={() => handleChangeNotification(setNotifTelegram)}
           inputProps={{ 'aria-label': 'controlled' }} />
         <Typography
           variant="subtitle1"

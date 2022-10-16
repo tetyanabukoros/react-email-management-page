@@ -1,18 +1,21 @@
-import { Box, Link, MenuItem, Select, Stack, Switch, Typography } from "@mui/material";
+import { Box, MenuItem, Select, Stack, Switch, Typography } from "@mui/material";
 import React from "react";
 
 
 
 
-export const Notifications = () => {
+export const Notifications = ({ 
+  messageSelect, 
+  handleMessageSelect,
+  notifications1Item,
+  notifications2Item,
+  notifications3Item,
+  handleChangeNotification,
+  setNotifications1Item,
+  setNotifications2Item,
+  setNotifications3Item,
+ }) => {
   
-const [messageSelect, setMessageSelect] = React.useState(10);
-
-const handleMessageSelect = (event) => {
-  setMessageSelect(event.target.value);
-};
-
-
   return (
     <Box mb={6}>
     <Typography
@@ -39,8 +42,8 @@ const handleMessageSelect = (event) => {
       </Typography>
       <Switch
         flex={2}
-        // checked={checked}
-        // onChange={handleChange}
+        checked={notifications1Item}
+        onChange={() => handleChangeNotification(setNotifications1Item)}
         inputProps={{ 'aria-label': 'controlled' }}
       />
       <Typography
@@ -69,8 +72,8 @@ const handleMessageSelect = (event) => {
       </Typography>
       <Switch
         flex={2}
-        // checked={checked}
-        // onChange={handleChange}
+        checked={notifications2Item}
+        onChange={() => handleChangeNotification(setNotifications2Item)}
         inputProps={{ 'aria-label': 'controlled' }}
       />
       <Typography
@@ -98,8 +101,8 @@ const handleMessageSelect = (event) => {
       </Typography>
       <Switch
         flex={2}
-        // checked={checked}
-        // onChange={handleChange}
+        checked={notifications3Item}
+        onChange={() => handleChangeNotification(setNotifications3Item)}
         inputProps={{ 'aria-label': 'controlled' }}
       />
 
