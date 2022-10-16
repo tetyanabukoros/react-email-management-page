@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/react-email-management-page/static/js/main.f6307f8b.js",
+    "main.js": "/react-email-management-page/static/js/main.3c70dd1b.js",
     "index.html": "/react-email-management-page/index.html",
-    "main.f6307f8b.js.map": "/react-email-management-page/static/js/main.f6307f8b.js.map"
+    "main.3c70dd1b.js.map": "/react-email-management-page/static/js/main.3c70dd1b.js.map"
   },
   "entrypoints": [
-    "static/js/main.f6307f8b.js"
+    "static/js/main.3c70dd1b.js"
   ]
 }
