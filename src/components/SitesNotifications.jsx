@@ -24,9 +24,21 @@ export const SitesNotifications = ({
   setSitesNotif7Item,
 }) => {
 
-  const [isChip, setIsChip] = useState(true);
-  const handleDelete = () => {
-    console.info('You clicked the delete icon.');
+  const [block1Item1, setBlock1Item1] = useState(true);
+  const [block1Item2, setBlock1Item2] = useState(true);
+  const [block1Item3, setBlock1Item3] = useState(true);
+  
+  const [block2Item1, setBlock2Item1] = useState(true);
+  const [block2Item2, setBlock2Item2] = useState(true);
+  
+  const [block3Item1, setBlock3Item1] = useState(true);
+  const [block3Item2, setBlock3Item2] = useState(true);
+  const [block3Item3, setBlock3Item3] = useState(true);
+  
+  const [block4Item1, setBlock4Item1] = useState(true);
+
+  const handleDelete = (blockItem) => {
+    blockItem(prev => !prev)
   };
 
   return (
@@ -87,9 +99,27 @@ export const SitesNotifications = ({
         flex={9}
       >
         <Stack flex={3} direction={{ xs: 'column', md: 'row' }} spacing={1}>
-          <Chip label="Seo" onDelete={handleDelete} />
-          <Chip label="Продвижение" onDelete={handleDelete} />
-          <Chip label="Аналитика" onDelete={handleDelete} />
+          <Chip 
+            label="Seo" 
+            onDelete={() => handleDelete(setBlock1Item1)} 
+            style={{
+              display: block1Item1 ? 'flex' : 'none'
+            }}
+          />
+          <Chip 
+            label="Продвижение" 
+            onDelete={() => handleDelete(setBlock1Item2)} 
+            style={{
+              display: block1Item2 ? 'flex' : 'none'
+            }}
+          />
+          <Chip 
+            label="Аналитика" 
+            onDelete={() => handleDelete(setBlock1Item3)} 
+            style={{
+              display: block1Item3 ? 'flex' : 'none'
+            }}
+          />
         </Stack>
       </Box>
       <Link
@@ -135,8 +165,20 @@ export const SitesNotifications = ({
         flex={9}
       >
         <Stack flex={3} direction={{ xs: 'column', md: 'row' }} spacing={1}>
-          <Chip label="Seo" onDelete={handleDelete} />
-          <Chip label="Продвижение" onDelete={handleDelete} />
+          <Chip 
+            label="Seo" 
+            onDelete={() => handleDelete(setBlock2Item1)} 
+            style={{
+              display: block2Item1 ? 'flex' : 'none'
+            }}
+          />
+          <Chip 
+            label="Продвижение" 
+            onDelete={() => handleDelete(setBlock2Item2)} 
+            style={{
+              display: block2Item2 ? 'flex' : 'none'
+            }}
+          />
         </Stack>
       </Box>
       <Link
@@ -180,9 +222,27 @@ export const SitesNotifications = ({
         flex={9}
       >
         <Stack flex={3} direction={{ xs: 'column', md: 'row' }} spacing={1}>
-          <Chip label="Seo" onDelete={handleDelete} />
-          <Chip label="Продвижение" onDelete={handleDelete} />
-          <Chip label="Аналитика" onDelete={handleDelete} />
+        <Chip 
+            label="Seo" 
+            onDelete={() => handleDelete(setBlock3Item1)} 
+            style={{
+              display: block3Item1 ? 'flex' : 'none'
+            }}
+          />
+          <Chip 
+            label="Продвижение" 
+            onDelete={() => handleDelete(setBlock3Item2)} 
+            style={{
+              display: block3Item2 ? 'flex' : 'none'
+            }}
+          />
+          <Chip 
+            label="Аналитика" 
+            onDelete={() => handleDelete(setBlock3Item3)} 
+            style={{
+              display: block3Item3 ? 'flex' : 'none'
+            }}
+          />
         </Stack>
       </Box>
       <Link
@@ -225,7 +285,13 @@ export const SitesNotifications = ({
       >
 
         <Stack flex={3} direction={{ xs: 'column', md: 'row' }} spacing={1}>
-          <Chip label="Биржи ссылок: Не обнаружен" onDelete={handleDelete} />
+          <Chip 
+            label="Биржи ссылок: Не обнаружен" 
+            onDelete={() => handleDelete(setBlock4Item1)} 
+            style={{
+              display: block4Item1 ? 'flex' : 'none'
+            }}
+          />
         </Stack>
       </Box>
       <Link
