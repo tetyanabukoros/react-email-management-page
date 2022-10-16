@@ -3,7 +3,7 @@ import { Stack } from "@mui/system";
 import React from "react";
 import { Notifications } from "./Notifications";
 import { SitesNotifications } from "./SitesNotifications";
-import { TelegramNotifications } from "./TelegramNotofications";
+import { TelegramNotifications } from "./TelegramNotifications";
 
 
 export const Feed = () => {

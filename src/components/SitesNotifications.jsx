@@ -1,5 +1,6 @@
 import { Box, Chip, Link, MenuItem, Select, Stack, Switch, Typography } from "@mui/material";
 import React, { useState } from "react";
+import TransitionsModal from "./Modal";
 
 
 export const SitesNotifications = ({ 
@@ -23,6 +24,8 @@ export const SitesNotifications = ({
   setSitesNotif6Item,
   setSitesNotif7Item,
 }) => {
+
+  const [openModal, setOpenModal] = useState(false);
 
   const [block1Item1, setBlock1Item1] = useState(true);
   const [block1Item2, setBlock1Item2] = useState(true);
@@ -129,7 +132,7 @@ export const SitesNotifications = ({
         component="button"
         variant="body1"
         onClick={() => {
-          console.info("I'm a button.");
+          setOpenModal(true)
         }}
       >
         Детали
@@ -188,7 +191,7 @@ export const SitesNotifications = ({
         component="button"
         variant="body1"
         onClick={() => {
-          console.info("I'm a button.");
+          setOpenModal(true)
         }}
       >
         Детали
@@ -252,7 +255,7 @@ export const SitesNotifications = ({
         component="button"
         variant="body1"
         onClick={() => {
-          console.info("I'm a button.");
+          setOpenModal(true)
         }}
       >
         Детали
@@ -301,7 +304,7 @@ export const SitesNotifications = ({
         component="button"
         variant="body1"
         onClick={() => {
-          console.info("I'm a button.");
+          setOpenModal(true)
         }}
       >
         Детали
@@ -344,7 +347,7 @@ export const SitesNotifications = ({
         component="button"
         variant="body1"
         onClick={() => {
-          console.info("I'm a button.");
+          setOpenModal(true)
         }}
       >
       </Link>
@@ -388,7 +391,7 @@ export const SitesNotifications = ({
         component="button"
         variant="body1"
         onClick={() => {
-          console.info("I'm a button.");
+          setOpenModal(true)
         }}
       >
       </Link>
@@ -413,6 +416,13 @@ export const SitesNotifications = ({
         </Select>
       </Box>
     </Stack>
+
+    {openModal && (
+      <TransitionsModal 
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+      />
+    )}
 
   </Box>
   )
