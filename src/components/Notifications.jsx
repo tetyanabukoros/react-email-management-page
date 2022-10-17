@@ -1,9 +1,6 @@
 import { Box, MenuItem, Select, Stack, Switch, Typography } from "@mui/material";
 import React from "react";
 
-
-
-
 export const Notifications = ({ 
   messageSelect, 
   handleMessageSelect,
@@ -38,6 +35,7 @@ export const Notifications = ({
       </Typography>
       <Typography
         flex={1}
+        sx={{display: {xs: "none", sm: "block"} }}
       >
       </Typography>
       <Switch
@@ -68,6 +66,7 @@ export const Notifications = ({
       </Typography>
       <Typography
         flex={1}
+        sx={{display: {xs: "none", sm: "block"} }}
       >
       </Typography>
       <Switch
@@ -97,6 +96,7 @@ export const Notifications = ({
       </Typography>
       <Typography
         flex={1}
+        sx={{display: {xs: "none", sm: "block"} }}
       >
       </Typography>
       <Switch

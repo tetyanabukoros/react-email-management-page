@@ -4,7 +4,10 @@ import EmailIcon from '@mui/icons-material/Email';
 
 export const Navbar = () => {
   return (
-    <AppBar position="stick">
+    <AppBar 
+      position="stick" 
+      sx={{display: {xs: "none", sm: "block"} }}
+    >
       <Toolbar>
         <EmailIcon />
       </Toolbar>

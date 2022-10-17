@@ -77,6 +77,7 @@ export const SitesNotifications = ({
       <Typography
         variant="subtitle1"
         flex={5}
+        sx={{display: {xs: "none", sm: "flex"} }}
       >
       </Typography>
     </Stack>
@@ -146,11 +147,10 @@ export const SitesNotifications = ({
       <Typography
         variant="body2"
         flex={5}
+        sx={{display: {xs: "none", sm: "flex"} }}
       >
         Поисковый агент присылает 1 письмо в неделю  и только  при условии, что найдены новые площадки
       </Typography>
-
-
     </Stack>
 
     <Typography
@@ -205,10 +205,9 @@ export const SitesNotifications = ({
       <Typography
         variant="subtitle1"
         flex={5}
+        sx={{display: {xs: "none", sm: "flex"} }}
       >
       </Typography>
-
-
     </Stack>
     <Typography
       variant="subtitle1"
@@ -269,6 +268,7 @@ export const SitesNotifications = ({
       <Typography
         variant="subtitle1"
         flex={5}
+        sx={{display: {xs: "none", sm: "flex"} }}
       >
       </Typography>
     </Stack>
@@ -318,6 +318,7 @@ export const SitesNotifications = ({
       <Typography
         variant="subtitle1"
         flex={5}
+        sx={{display: {xs: "none", sm: "flex"} }}
       >
       </Typography>
     </Stack>
@@ -423,7 +424,6 @@ export const SitesNotifications = ({
         setOpenModal={setOpenModal}
       />
     )}
-
   </Box>
   )
 }

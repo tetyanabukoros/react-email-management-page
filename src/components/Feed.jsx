@@ -7,7 +7,6 @@ import { SitesNotifications } from "./SitesNotifications";
 import SuccessModal from "./SuccessModal";
 import { TelegramNotifications } from "./TelegramNotifications";
 
-
 export const Feed = () => {
   const [notifications1Item, setNotifications1Item] = useState(true);
   const [notifications2Item, setNotifications2Item] = useState(false);
@@ -150,11 +149,17 @@ export const Feed = () => {
       </Stack>
 
       {openSaveModal && (
-        <SaveModal openModal={openSaveModal} setOpenModal={setOpenSaveModal}/>
+        <SaveModal 
+          openModal={openSaveModal} 
+          setOpenModal={setOpenSaveModal}
+        />
       )}
 
       {openSuccessModal && (
-        <SuccessModal openModal={openSuccessModal} setOpenModal={setOpenSuccessModal}/>
+        <SuccessModal 
+          openModal={openSuccessModal} 
+          setOpenModal={setOpenSuccessModal}
+        />
       )}
     </Box>
   )

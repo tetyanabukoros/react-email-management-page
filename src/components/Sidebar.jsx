@@ -8,7 +8,6 @@ export const Sidebar = () => {
       p={2}
       sx={{display: {xs: "none", sm: "block"} }}
     >
-      {/* Sidebar */}
     </Box>
   )
 }

@@ -4,10 +4,8 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
-import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
-
 
 const style = {
   position: 'absolute',

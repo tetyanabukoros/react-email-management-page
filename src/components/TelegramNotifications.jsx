@@ -39,6 +39,7 @@ export const TelegramNotifications = ({
         <Typography
           variant="subtitle1"
           flex={5}
+          sx={{display: {xs: "none", sm: "flex"} }}
         >
         </Typography>
       </Stack></>
