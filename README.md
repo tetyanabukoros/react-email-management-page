@@ -1,5 +1,10 @@
 [DEMO](https://tetyanabukoros.github.io/react-email-management-page/)
 
+[Figma layout](https://www.figma.com/file/rbuTofx7iw1WCyQiCQHM5R/testCollaba-(1)?node-id=0%3A1)
+
+
+Here you see the Email management page
+
 
 This page has 3 categories of letters:
 
@@ -40,4 +45,17 @@ When you click on the “Save” button, the “Are you sure?” modal should po
 In case of clicking on “Yes” - notify the user of success
 
 ![image](https://user-images.githubusercontent.com/94980714/196033793-1ac9b1ef-5c1e-401f-a684-d26ecaf83732.png)
+
+Instructions how to run application locally:
+Use 14 version of node.js:
+nvm use 14
+Clone the repository to your local machine, open terminal and clone repo with command bellow:
+git clone https://github.com/tetyanabukoros/react-email-management-page.git
+Open project in terminal:
+cd react-email-management
+Set up project and install necessary packages:
+npm install
+Add command to terminal:
+npm start
+Open application in your browser http://localhost:3000/
 
