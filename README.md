@@ -2,10 +2,7 @@
 
 [Figma layout](https://www.figma.com/file/rbuTofx7iw1WCyQiCQHM5R/testCollaba-(1)?node-id=0%3A1)
 
-Technologies used:
 
-React 
-Material UI
 
 
 Here you see the Email management page
@@ -74,4 +71,10 @@ Add command to terminal:
 npm start
 
 Open application in your browser http://localhost:3000/
+
+Technologies used:
+
+React 
+
+Material UI
 
