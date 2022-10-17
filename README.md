@@ -47,15 +47,26 @@ In case of clicking on “Yes” - notify the user of success
 ![image](https://user-images.githubusercontent.com/94980714/196033793-1ac9b1ef-5c1e-401f-a684-d26ecaf83732.png)
 
 Instructions how to run application locally:
+
 Use 14 version of node.js:
+
 nvm use 14
+
 Clone the repository to your local machine, open terminal and clone repo with command bellow:
+
 git clone https://github.com/tetyanabukoros/react-email-management-page.git
+
 Open project in terminal:
+
 cd react-email-management
+
 Set up project and install necessary packages:
+
 npm install
+
 Add command to terminal:
+
 npm start
+
 Open application in your browser http://localhost:3000/
 
