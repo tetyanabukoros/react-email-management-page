@@ -113,6 +113,7 @@ export const Notifications = ({
           defaultValue={10}
           value={messageSelect}
           onChange={handleMessageSelect}
+          disabled={!notifications3Item}
         >
           <MenuItem value={10}>Мгновенно</MenuItem>
           <MenuItem value={20}>1 раз в день</MenuItem>

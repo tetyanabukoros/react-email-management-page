@@ -366,6 +366,7 @@ export const SitesNotifications = ({
           defaultValue={10}
           value={adsMessageFirst}
           onChange={handleAdsMessageFirst}
+          disabled={!sitesNotif6Item}
         >
           <MenuItem value={10}>Мгновенно</MenuItem>
           <MenuItem value={20}>1 раз в день</MenuItem>
@@ -410,6 +411,8 @@ export const SitesNotifications = ({
           defaultValue={10}
           value={adsMessageSecond}
           onChange={handleAdsMessageSecond}
+          disabled={!sitesNotif7Item}
+
         >
           <MenuItem value={10}>Мгновенно</MenuItem>
           <MenuItem value={20}>1 раз в день</MenuItem>
