@@ -27,19 +27,24 @@ export default function SaveModal({ openModal, setOpenModal }) {
 
   return (
     <div>
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        open={openModal}
-        onClose={() => setOpenModal(false)}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={openModal}>
-          <Box sx={style}>
+      {openSuccessModal
+        ? <SuccessModal 
+            openModal={openSuccessModal} 
+            setOpenModal={setOpenSuccessModal}
+          />
+        : <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            open={openModal}
+            onClose={() => setOpenModal(false)}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 500,
+            }}
+          >
+           <Fade in={openModal}>
+            <Box sx={style}>
             <Typography mb={4} id="transition-modal-title" variant="h6" component="h2">
               Вы уверенны?
             </Typography>
@@ -49,31 +54,28 @@ export default function SaveModal({ openModal, setOpenModal }) {
               spacing={2}
               justifyContent="center"
             >
-            <Button 
-              variant="contained"
-              onClick={() => {
-                setOpenSuccessModal(true);
-                setTimeout(() => {
-                  setOpenModal(false);
-                }, 2000);
-              }}
-            >
-              Да
-            </Button>
-            <Button 
-              variant="outlined"
-              color="error"
-              onClick={() => setOpenModal(false)}
-            >
-              Нет
-            </Button>
+              <Button 
+                variant="contained"
+                onClick={() => {
+                  setOpenSuccessModal(true);
+                  setTimeout(() => {
+                    setOpenModal(false);
+                  }, 2000);
+                }}
+              >
+                Да
+              </Button>
+              <Button 
+                variant="outlined"
+                color="error"
+                onClick={() => setOpenModal(false)}
+              >
+                Нет
+              </Button>
             </Stack>
           </Box>
         </Fade>
-      </Modal>
-      {openSuccessModal && (
-        <SuccessModal openModal={openSuccessModal} setOpenModal={setOpenSuccessModal}/>
-      )}
+      </Modal>}
     </div>
   );
 }
