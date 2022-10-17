@@ -126,6 +126,9 @@ export const SitesNotifications = ({
             }}
           />
         </Stack>
+        {!block1Item1 && !block1Item2  && !block1Item3 && (
+          <Chip label="Дополнительные тематики отсутствуют" size="small" variant="outlined" />
+        )}
       </Box>
       <Link
         underline="none"
@@ -185,6 +188,9 @@ export const SitesNotifications = ({
             }}
           />
         </Stack>
+        {!block2Item1 && !block2Item2 && (
+          <Chip label="Дополнительные тематики отсутствуют" size="small" variant="outlined" />
+        )}
       </Box>
       <Link
         underline="none"
@@ -249,6 +255,9 @@ export const SitesNotifications = ({
             }}
           />
         </Stack>
+          {!block3Item1 && !block3Item2  && !block3Item3 && (
+            <Chip label="Дополнительные тематики отсутствуют" size="small" variant="outlined" />
+          )}
       </Box>
       <Link
         underline="none"
@@ -300,6 +309,9 @@ export const SitesNotifications = ({
             }}
           />
         </Stack>
+        {!block4Item1 && (
+          <Chip label="Дополнительные тематики отсутствуют" size="small" variant="outlined" />
+        )}
       </Box>
       <Link
         underline="none"
