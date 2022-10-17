@@ -26,6 +26,7 @@ export const Notifications = ({
       direction="row"
       spacing={2}
       justifyContent="space-between"
+      alignItems="center"
     >
       <Typography
         variant="subtitle1"
@@ -57,6 +58,7 @@ export const Notifications = ({
       direction="row"
       spacing={2}
       justifyContent="space-between"
+      alignItems="center"
     >
       <Typography
         variant="subtitle1"
@@ -87,6 +89,7 @@ export const Notifications = ({
       direction="row"
       spacing={2}
       justifyContent="space-between"
+      alignItems="center"
     >
       <Typography
         variant="subtitle1"

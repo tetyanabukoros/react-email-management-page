@@ -98,6 +98,7 @@ export const SitesNotifications = ({
       direction="row"
       spacing={2}
       justifyContent="space-between"
+      alignItems="center"
     >
       <Box
         flex={9}
@@ -163,6 +164,7 @@ export const SitesNotifications = ({
       direction="row"
       spacing={2}
       justifyContent="space-between"
+      alignItems="center"
     >
       <Box
         flex={9}
@@ -219,6 +221,7 @@ export const SitesNotifications = ({
       direction="row"
       spacing={2}
       justifyContent="space-between"
+      alignItems="center"
     >
       <Box
         flex={9}
@@ -282,6 +285,7 @@ export const SitesNotifications = ({
       direction="row"
       spacing={2}
       justifyContent="space-between"
+      alignItems="center"
     >
       <Box
         flex={9}
@@ -334,6 +338,7 @@ export const SitesNotifications = ({
       direction="row"
       spacing={2}
       justifyContent="space-between"
+      alignItems="center"
     >
       <Typography
         variant="subtitle1"
@@ -379,6 +384,7 @@ export const SitesNotifications = ({
       direction="row"
       spacing={2}
       justifyContent="space-between"
+      alignItems="center"
     >
       <Typography
         variant="subtitle1"
